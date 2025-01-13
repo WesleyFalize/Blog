@@ -31,3 +31,4 @@ jobs:
           app_location: "/"
           output_location: "public"
           skip_app_build: true
+          action: "upload"
