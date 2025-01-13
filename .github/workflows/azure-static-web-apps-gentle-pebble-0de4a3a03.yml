@@ -19,26 +19,26 @@ jobs:
           submodules: true
           lfs: false
 
-      # Setup the required Hugo version
+      # Install the required Hugo version
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "0.125.7" # Specify a compatible Hugo version
-          extended: true # Ensure extended version is used for advanced features
+          hugo-version: "0.125.7"
+          extended: true
 
-      # Build and deploy to Azure Static Web Apps
-      - name: Build And Deploy
-        id: builddeploy
+      # Build the site manually with Hugo
+      - name: Build Hugo Site
+        run: hugo --minify --destination public
+
+      # Deploy to Azure Static Web Apps
+      - name: Deploy to Azure Static Web Apps
+        id: deploy
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_GENTLE_PEBBLE_0DE4A3A03 }}
-          repo_token: ${{ secrets.GITHUB_TOKEN }} # Used for GitHub integrations (e.g., PR comments)
-          action: "upload"
-          ###### Repository/Build Configurations - These values can be configured to match your app requirements. ######
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
           app_location: "/" # App source code path
-          api_location: "" # API source code path - optional
-          output_location: "public" # Built app content directory - optional
-          ###### End of Repository/Build Configurations ######
+          output_location: "public" # Output folder containing the built site
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
