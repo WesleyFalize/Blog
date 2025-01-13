@@ -29,13 +29,18 @@ Initially my reason to write was to become part of the Microsoft 365 community a
 # How is my current blog setup
 The blog is currently setup very simple. It's making use of the following components, which i will go into depth a bit later.
 - Hugo - Papermod Theme
-- GitHub
+- Github
 - Obsidian
 	- Templater plugin
-- GitHub Pages
+- Azure Static site
 
 ## Hugo
 I've started with a simple Hugo project and followed the documentation from the Papermod Theme to get started. Which was as simple as following the installation guide: [Installation · adityatelange/hugo-PaperMod Wiki](https://github.com/adityatelange/hugo-PaperMod/wiki/Installation) and within 5 minutes the Hugo site was running locally. What i needed to do to get it working was create two pages, called Archives and search with the information found and had to adjust my config.yaml to add some information regarding my specific use cases. This was as simple as it could be.
 
 ## GitHub
-Getting started and pushing the repository to GitHub was simple. I've used the guide from Hugo to do this: [Host on GitHub Pages | Hugo](https://gohugo.io/hosting-and-deployment/hosting-on-github/). 
+Getting started and pushing the repository to GitHub was simple. I've published the code directly from Visual Studio code and created a new respository.
+
+## Obsidian
+
+## Azure Static site
+I've created a static site and created with the guide from [Deploy a Hugo site to Azure Static Web Apps | Microsoft Learn](https://learn.microsoft.com/en-us/azure/static-web-apps/publish-hugo) For all the relevant information.
