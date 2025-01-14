@@ -1,7 +1,47 @@
-.obsidian
-# Ignore public directory (Hugo build output)
+# Hugo build output
+public/
+resources/
+hugo_stats.json
 
-# Ignore other build artifacts
-*.min.js
+# Hugo configuration files (local overrides)
+config.local.toml
+config.local.yaml
+config.local.json
+
+# Logs and temporary files
 *.log
 *.lock
+*.bak
+*.swp
+*.tmp
+
+# Node.js dependencies (if using npm/yarn for themes or build tools)
+node_modules/
+
+# Cache directories
+.cache/
+.DS_Store
+Thumbs.db
+
+# OS-specific files
+desktop.ini
+
+# Obsidian files (as specified in your example)
+.obsidian/
+
+# IDE/editor settings
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# GitHub Actions cache
+.github/workflows/.DS_Store
+
+# Other artifacts (e.g., minified files created manually)
+*.min.js
+*.min.css
+
+# Backup and hidden files
+*.~*~
+*.un~
