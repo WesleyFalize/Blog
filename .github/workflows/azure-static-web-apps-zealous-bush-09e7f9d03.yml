@@ -45,10 +45,7 @@ jobs:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
         run: |
-          hugo \
-            --gc \
-            --minify \
-            --baseURL "/"
+          hugo --minify
 
       - name: Upload Static Content
         id: upload
