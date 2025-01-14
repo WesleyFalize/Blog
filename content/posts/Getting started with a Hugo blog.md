@@ -41,7 +41,110 @@ I've started with a simple Hugo project and followed the documentation from the 
 Getting started and pushing the repository to GitHub was simple. I've published the code directly from Visual Studio code and created a new respository.
 
 ## Obsidian
+[Obsidian - Sharpen your thinking](https://obsidian.md/) Is an amazing tool. I've used it to visualize my personal knowledge management to a far greater extend then I ever imagined. But in the essence it's also a great markdown editor. Editing the metada is very simple
+![[Obsidian Metadata example.png]]
 
+## Templater
+Another great feature i've been using is a community plugin called Templater. This allows me to create the markdown files with the correct frontmatter (the metadata) every time. I've got the following MD setup to get it working but it can be simplified a great deal if required.
+```yaml
+---
+author: ["Wesley Falize"]
+title: "<% tp.file.title %>"
+date: "<% tp.date.now('YYYY-MM-DD') %>"
+description: "<%* const desc = await tp.system.prompt('Enter a description'); tR += desc; %>"
+summary: "<%* const sum = await tp.system.prompt('Enter a summary'); tR += sum; %>"
+tags: ["<%* const tag1 = await tp.system.prompt('Enter a tag'); tR += tag1; %>", "<%* const tag2 = await tp.system.prompt('Enter another tag'); tR += tag2; %>"]
+categories: ["<%* const cat1 = await tp.system.prompt('Enter a category'); tR += cat1; %>", "<%* const cat2 = await tp.system.prompt('Enter another category'); tR += cat2; %>"]
+series: ["<%* const series = await tp.system.prompt('Enter series name'); tR += series; %>"]
+ShowToc: true
+TocOpen: false
+---
+
+# <% tp.file.title %>
+
+
+```
 
 ## GitHub pages
-After struggling for quite some time with Azure Static sites I went to GitHub pages because it was more documented and helped me solve errors more easily. With my current theme i had a lot of difficulties with the Hugo version causing issues as my theme needs a newer version then the default
+After struggling for quite some time with Azure Static sites I went to GitHub pages because it was more documented and helped me solve errors more easily. With my current theme i had a lot of difficulties with the Hugo version causing issues as my theme needs a newer version then the default GitHub Actions. My site is visible [WesleyFalize/Blog](https://github.com/WesleyFalize/Blog) and it's a very simple blog that's being pushed with a GitHub Action after enabling GitHub Pages on the site. I had to do some work with ChatGPT to get the YAML to work but in the end this is my yaml:
+```yaml
+# Sample workflow for building and deploying a Hugo site to GitHub Pages
+name: Deploy Hugo site to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches:
+      - main
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+# Default to bash
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.140.2
+    steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb          
+      - name: Install Dart Sass
+        run: sudo snap install dart-sass
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Install Node.js dependencies
+        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      - name: Build with Hugo
+        env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+          HUGO_ENVIRONMENT: production
+          TZ: America/Los_Angeles
+        run: |
+          hugo \
+            --gc \
+            --minify \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"          
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+I might need to adjust some items regarding the TZ in the ENV variables but for now the site is working. 
