@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hugo on Wesley&#39;s blog!</title>
+    <link>http://localhost:1313/tags/hugo/</link>
+    <description>Recent content in Hugo on Wesley&#39;s blog!</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 13 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting started with a Hugo blog</title>
+      <link>http://localhost:1313/posts/getting-started-with-a-hugo-blog/</link>
+      <pubDate>Mon, 13 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/getting-started-with-a-hugo-blog/</guid>
+      <description>&lt;h1 id=&#34;getting-started-with-a-hugo-blog&#34;&gt;Getting started with a Hugo blog&lt;/h1&gt;
+&lt;p&gt;Getting started with a Hugo blog was an endeavor I&amp;rsquo;ve started a couple of times. Since i started working within Microsoft 365 I&amp;rsquo;ve been interested in sharing my knowledge. Mainly due to some popular bloggers and the insane amount of knowledge they can share. In the past I&amp;rsquo;ve tried blogging with a few amazing technologies because they we&amp;rsquo;re interesting to me. I&amp;rsquo;ve dabbled in NextJS, done some stuff with React and tried Gatsby for some static site rendering. This was all an amazing learning experience but i missed the underlying knowledge and always tried to over engineer this. Then i stepped upon Hugo, which was a few years ago. It seemed so simple and i was able to whip up a site within 10 minutes through templates and an instruction. This felt like magic. However i fell down in my own trap and tried to over engineer this site and get everything in there, a profile page, my resume, amazing search functionality. This caused me to not start actually blogging and it stayed in the development phase.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

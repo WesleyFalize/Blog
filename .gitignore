@@ -1,7 +1,5 @@
 .obsidian
 # Ignore public directory (Hugo build output)
-public
-/public/
 
 # Ignore other build artifacts
 *.min.js
