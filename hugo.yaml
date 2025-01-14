@@ -1,7 +1,7 @@
 baseURL: https://wesleyfalize.github.io/Blog/
 languageCode: en-us
 title: Wesley's blog!
-theme: ["PaperMod"]
+theme = "PaperMod"
 enableInlineShortcodes: true
 enableRobotsTXT: true
 languages:
