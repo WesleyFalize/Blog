@@ -17,6 +17,7 @@ on:
         required: false
         default: "0.140.2"
 
+
 # Allow one concurrent deployment
 concurrency:
   group: "pages"
@@ -47,7 +48,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          ref: exampleSite
+          ref: Blog
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
