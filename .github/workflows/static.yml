@@ -51,6 +51,10 @@ jobs:
           hugo \
             --buildDrafts --gc \
             --baseURL ${{ steps.pages.outputs.base_url }}
+      - name: Clean up public directory (if needed)
+        run: |
+          find public -type l -exec rm {} \;  # Remove symlinks, if any
+          rm -rf public/.git  # Remove git metadata from the public directory (if present)
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
