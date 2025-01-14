@@ -1,0 +1,51 @@
+# Workflow for deploying a Hugo site to GitHub Pages
+name: Deploy Hugo Site to GitHub Pages
+
+on:
+  # Trigger workflow on pushes to the main branch
+  push:
+    branches: ["main"]
+
+  # Allow manual triggers
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repository
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      # Setup Hugo
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.125.7'
+
+      # Build the Hugo site
+      - name: Build Hugo Site
+        run: hugo --minify
+
+      # Upload the Hugo build output as an artifact for GitHub Pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
