@@ -32,7 +32,7 @@ The blog is currently setup very simple. It's making use of the following compon
 - Github
 - Obsidian
 	- Templater plugin
-- Azure Static site
+- GitHub Pages
 
 ## Hugo
 I've started with a simple Hugo project and followed the documentation from the Papermod Theme to get started. Which was as simple as following the installation guide: [Installation · adityatelange/hugo-PaperMod Wiki](https://github.com/adityatelange/hugo-PaperMod/wiki/Installation) and within 5 minutes the Hugo site was running locally. What i needed to do to get it working was create two pages, called Archives and search with the information found and had to adjust my config.yaml to add some information regarding my specific use cases. This was as simple as it could be.
@@ -42,5 +42,6 @@ Getting started and pushing the repository to GitHub was simple. I've published 
 
 ## Obsidian
 
-## Azure Static site
-I've created a static site and created with the guide from [Deploy a Hugo site to Azure Static Web Apps | Microsoft Learn](https://learn.microsoft.com/en-us/azure/static-web-apps/publish-hugo) For all the relevant information.
+
+## GitHub pages
+After struggling for quite some time with Azure Static sites I went to GitHub pages because it was more documented and helped me solve errors more easily. With my current theme i had a lot of difficulties with the Hugo version causing issues as my theme needs a newer version then the default
