@@ -1,6 +1,6 @@
 # Hugo build output
-public/
-resources/
+public/*
+resources/*
 hugo_stats.json
 
 # Hugo configuration files (local overrides)
