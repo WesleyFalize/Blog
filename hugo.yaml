@@ -26,9 +26,9 @@ languages:
         - name: Tags
           url: tags/
           weight: 10
-        - name: Profile
-          url: /profile/
-          weight: 10 
+        # - name: Profile
+        #   url: /profile/
+        #   weight: 10 
 
 params:
   enableSearch: true
