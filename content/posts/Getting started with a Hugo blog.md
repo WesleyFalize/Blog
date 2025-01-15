@@ -41,9 +41,7 @@ I've started with a simple Hugo project and followed the documentation from the 
 Getting started and pushing the repository to GitHub was simple. I've published the code directly from Visual Studio code and created a new respository.
 
 ## Obsidian
-[Obsidian - Sharpen your thinking](https://obsidian.md/) Is an amazing tool. I've used it to visualize my personal knowledge management to a far greater extend then I ever imagined. But in the essence it's also a great markdown editor. Editing the metada is very simple
-![[Obsidian Metadata example.png]]
-
+[Obsidian - Sharpen your thinking](https://obsidian.md/) Is an amazing tool. I've used it to visualize my personal knowledge management to a far greater extend then I ever imagined. But in the essence it's also a great markdown editor. Editing the metada is very simple ![Obsidian metadata example](assets\Obsidian Metadata example.png)
 ## Templater
 Another great feature i've been using is a community plugin called Templater. This allows me to create the markdown files with the correct frontmatter (the metadata) every time. I've got the following MD setup to get it working but it can be simplified a great deal if required.
 ```yaml
@@ -66,7 +64,7 @@ TocOpen: false
 ```
 
 ## GitHub pages
-After struggling for quite some time with Azure Static sites I went to GitHub pages because it was more documented and helped me solve errors more easily. With my current theme i had a lot of difficulties with the Hugo version causing issues as my theme needs a newer version then the default GitHub Actions. My site is visible [WesleyFalize/Blog](https://github.com/WesleyFalize/Blog) and it's a very simple blog that's being pushed with a GitHub Action after enabling GitHub Pages on the site. I had to do some work with ChatGPT to get the YAML to work but in the end this is my yaml:
+After struggling for quite some time with Azure Static sites I went to GitHub pages because it was more documented and helped me solve errors more easily. With my current theme i had a lot of difficulties with the Hugo version causing issues as my theme needs a newer version then the default GitHub Actions. My site is visible [WesleyFalize/Blog](https://github.com/WesleyFalize/Blog)/ and it's a very simple blog that's being pushed with a GitHub Action after enabling GitHub Pages on the site. I had to do some work with ChatGPT to get the YAML to work but in the end this is my yaml:
 ```yaml
 # Sample workflow for building and deploying a Hugo site to GitHub Pages
 name: Deploy Hugo site to Pages
