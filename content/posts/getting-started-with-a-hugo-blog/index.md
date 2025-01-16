@@ -32,7 +32,7 @@ I've started with a simple Hugo project and followed the documentation from the 
 ## GitHub
 Getting started and pushing the repository to GitHub was simple. I've published the code directly from Visual Studio code and created a new respository.
 ## Obsidian
-[Obsidian - Sharpen your thinking](https://obsidian.md/) Is an amazing tool. I've used it to visualize my personal knowledge management to a far greater extend then I ever imagined. But in the essence it's also a great markdown editor. Editing the metadata is very simple ![Obsidian metadata example](assets/ObsidianMetadataExample.png)
+[Obsidian - Sharpen your thinking](https://obsidian.md/) Is an amazing tool. I've used it to visualize my personal knowledge management to a far greater extend then I ever imagined. But in the essence it's also a great markdown editor. Editing the metadata is very simple ![Obsidian metadata example](posts\getting-started-with-a-hugo-blog\ObsidianMetadataExample.png)
 ## Templater
 Another great feature i've been using is a community plugin called Templater. This allows me to create the markdown files with the correct frontmatter (the metadata) every time. I've got the following MD setup to get it working but it can be simplified a great deal if required.
 ```yaml
