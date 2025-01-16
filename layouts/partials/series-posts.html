@@ -1,0 +1,5 @@
+{{ if .Params.series }}
+    {{ $name := index .Params.series 0 }}
+    {{ $name := $name | urlize }}
+    <p>Part of the <a href="{{ "/series/" | relURL }}{{ $name }}/">{{ $name }}</a> series.</p>
+{{ end }}

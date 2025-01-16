@@ -1,5 +1,17 @@
 ---
-date: '{{ .Date }}'
+author: ["Wesley Falize"]
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
+description: 
+summary: 
+tags: []
+categories:
+  - 
+series:
+  - SeriesName
+ShowToc: true
+TocOpen: false
 draft: true
-title: '{{ replace .File.ContentBaseName "-" " " | title }}'
 ---
+# {{ replace .Name "-" " " | title }}
+

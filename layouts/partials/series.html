@@ -1,0 +1,31 @@
+{{ define "main" }}  
+<h1>Series</h1>  
+{{ $series := .Site.Taxonomies.series }}  
+{{ if $series }}  
+  <!-- Create a slice to hold series and their counts -->  
+  {{ $seriesCount := slice }}  
+  <!-- Loop through the series to populate the slice -->  
+  {{ range $name, $taxonomy := $series }}  
+    {{ $seriesCount = $seriesCount | append (dict "name" $name "count" (len $taxonomy.Pages) "pages" $taxonomy.Pages) }}  
+  {{ end }}  
+  <!-- Sort the slice by count in descending order -->  
+  {{ $sortedSeries := sort $seriesCount "count" "desc" }}  
+  <ul>  
+    <!-- Loop through the sorted series -->  
+    {{ range $sortedSeries }}  
+      <li>  
+        <h2>{{ .name }} ({{ .count }})</h2>  
+        <ul>  
+          {{ range .pages }}  
+            <li>  
+              <a href="{{ .Permalink }}">{{ .Title }}</a> - {{ .Date.Format "2006-01-02" }}  
+            </li>  
+          {{ end }}  
+        </ul>  
+      </li>  
+    {{ end }}  
+  </ul>  
+{{ else }}  
+  <p>No series found.</p>  
+{{ end }}  
+{{ end }}  

@@ -32,24 +32,24 @@ I've started with a simple Hugo project and followed the documentation from the 
 ## GitHub
 Getting started and pushing the repository to GitHub was simple. I've published the code directly from Visual Studio code and created a new respository.
 ## Obsidian
-[Obsidian - Sharpen your thinking](https://obsidian.md/) Is an amazing tool. I've used it to visualize my personal knowledge management to a far greater extend then I ever imagined. But in the essence it's also a great markdown editor. Editing the metadata is very simple ![Obsidian metadata example](ObsidianMetadataExample.png)
+[Obsidian - Sharpen your thinking](https://obsidian.md/) Is an amazing tool. I've used it to visualize my personal knowledge management to a far greater extend then I ever imagined. But in the essence it's also a great markdown editor. Editing the metadata is very simple ![Obsidian metadata example](assets/ObsidianMetadataExample.png)
 ## Templater
 Another great feature i've been using is a community plugin called Templater. This allows me to create the markdown files with the correct frontmatter (the metadata) every time. I've got the following MD setup to get it working but it can be simplified a great deal if required.
 ```yaml
 ---
 author: ["Wesley Falize"]
-title: "<% tp.file.title %>"
-date: "<% tp.date.now('YYYY-MM-DD') %>"
-description: "<%* const desc = await tp.system.prompt('Enter a description'); tR += desc; %>"
-summary: "<%* const sum = await tp.system.prompt('Enter a summary'); tR += sum; %>"
-tags: ["<%* const tag1 = await tp.system.prompt('Enter a tag'); tR += tag1; %>", "<%* const tag2 = await tp.system.prompt('Enter another tag'); tR += tag2; %>"]
-categories: ["<%* const cat1 = await tp.system.prompt('Enter a category'); tR += cat1; %>", "<%* const cat2 = await tp.system.prompt('Enter another category'); tR += cat2; %>"]
-series: ["<%* const series = await tp.system.prompt('Enter series name'); tR += series; %>"]
+title: "index"
+date: "2025-01-16"
+description: "null"
+summary: "null"
+tags: ["null", "null"]
+categories: ["null", "null"]
+series: ["null"]
 ShowToc: true
 TocOpen: false
 ---
 
-# <% tp.file.title %>
+# index
 
 
 ```
