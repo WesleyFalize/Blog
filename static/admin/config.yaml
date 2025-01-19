@@ -1,9 +1,11 @@
 backend:
-  name: git # Use git-gateway for Netlify integration or git for manual Git
-  repo: https://github.com/WesleyFalize/Blog
-  branch: main      # Your site's branch
+  name: git
+  repo: "WesleyFalize/Blog" # GitHub repo in username/repo format
+  branch: main
+
 media_folder: "static/images/uploads" # Folder for images
 public_folder: "/images/uploads"      # Public path for images
+
 collections:
   - name: "blog"
     label: "Blog"
