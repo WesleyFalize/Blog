@@ -1,4 +1,4 @@
-baseURL: https://wesleyfalize.github.io/Blog/
+baseURL: https://falize.nl
 languageCode: en-us
 title: Wesleys blog!
 theme: ["PaperMod"]
@@ -38,7 +38,7 @@ languages:
 params:
   headless_cms:
     engine: "sveltia"
-    site_url: https://wesleyfalize.github.io/Blog/
+    site_url: https://falize.nl
     backend:
       name: "github"
       repo: "WesleyFalize/Blog"
