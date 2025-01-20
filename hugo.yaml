@@ -42,7 +42,7 @@ params:
     backend:
       name: "github"
       repo: "WesleyFalize/Blog"
-      base_url: sveltia-cms-auth.wesley-falize.workers.dev
+      base_url: sveltia-cms-auth.wesley-falize.workers.dev/
     collections:
       - name: "blog"
         label: "Blog"
