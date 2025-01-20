@@ -1,10 +1,14 @@
 ---
+draft: false
 author:
   - Wesley Falize
 title: Understanding the basics of sensitivity labels for Microsoft groups
 date: 2025-01-16
-description: This blog will describe the basics of Microsoft 365 group labeling and what controls are availble
-summary: 
+description: This blog will describe the basics of Microsoft 365 group labeling
+  and what controls are availble
+summary: A sensitivity label is a tool for classifying content. It offers
+  protection, awareness and governance. Within this article it shows how they
+  work with groups
 tags:
   - Compliancy
   - Teams
@@ -16,7 +20,6 @@ series:
   - Microsoft 365 Compliancy
 ShowToc: true
 TocOpen: false
-draft: false
 ---
 # Why Use a Sensitivity Label
 A sensitivity label is a quick and effective way to see what kind of policy is enforced on a Microsoft 365 group. It gives you better control over governance in your environment and helps end users understand what type of data they can safely store in a specific team. For example, if a team is labeled as "External," users know not to store documents meant only for internal use. While this is a simple example, sensitivity labels can provide deeper insights depending on your organization's needs.
