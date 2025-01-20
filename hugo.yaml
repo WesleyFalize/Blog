@@ -1,13 +1,16 @@
 baseURL: https://wesleyfalize.github.io/Blog/
 languageCode: en-us
 title: Wesleys blog!
-theme: ["PaperMod"] 
+theme: ["PaperMod"]
 enableInlineShortcodes: true
 enableRobotsTXT: true
+module:
+  imports:
+    - path: github.com/privatemaker/headless-cms
 taxonomies:
-      category: categories
-      tag: tags
-      series: series
+  category: categories
+  tag: tags
+  series: series
 languages:
   en:
     languageName: "English"
@@ -26,14 +29,73 @@ languages:
         - name: Tags
           url: tags/
           weight: 10
-        - name : "Series"
-          url : "/series/"
-          weight : 2
+        - name: "Series"
+          url: "/series/"
+          weight: 2
         # - name: Profile
         #   url: /profile/
-        #   weight: 10 
+        #   weight: 10
 params:
-  DateFormat : "January 2, 2006"
+  headless_cms:
+    engine: "sveltia"
+    site_url: https://wesleyfalize.github.io/Blog/
+    backend:
+      name: "github"
+      repo: "WesleyFalize/Blog"
+    collections:
+      - name: "blog"
+        label: "Blog"
+        folder: "content/posts"
+        create: true
+        slug: "{{slug}}"
+        fields:
+          - {
+              label: "Author",
+              name: "author",
+              widget: "list",
+              default: ["Wesley Falize"],
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Date", name: "date", widget: "datetime" }
+          - {
+              label: "Description",
+              name: "description",
+              widget: "string",
+              default: "",
+            }
+          - { label: "Summary", name: "summary", widget: "string", default: "" }
+          - {
+              label: "Tags",
+              name: "tags",
+              widget: "list",
+              default: ["Hugo", "Blog"],
+            }
+          - {
+              label: "Categories",
+              name: "categories",
+              widget: "list",
+              default: ["Blog"],
+            }
+          - {
+              label: "Series",
+              name: "series",
+              widget: "list",
+              default: ["Getting started with a blog"],
+            }
+          - {
+              label: "Show Table of Contents",
+              name: "ShowToc",
+              widget: "boolean",
+              default: true,
+            }
+          - {
+              label: "Table of Contents Open",
+              name: "TocOpen",
+              widget: "boolean",
+              default: false,
+            }
+          - { label: "Body", name: "body", widget: "markdown" }
+  DateFormat: "January 2, 2006"
   enableSearch: true
   ShowShareButtons: true
   ShowReadingTime: true
@@ -76,4 +138,5 @@ outputs:
   home:
     - HTML
     - RSS
-    - JSON # necessary for search
+    - JSON
+    - HeadlessCMSConfig
