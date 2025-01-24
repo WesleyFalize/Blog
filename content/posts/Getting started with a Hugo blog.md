@@ -1,21 +1,19 @@
 ---
-author:
-  - Wesley Falize
 title: Getting started with a Hugo blog
-date: 2025-01-13
+date: 2025-01-13T00:00:00.000Z
+author: Wesley Falize
 description: This shows the process of getting started with a blog and how I've done it.
 summary: In this blog i talk about what i finally set up to get started with blogging
 tags:
-  - Hugo
-  - Blog
 categories:
   - Blog
-  - ""
 series:
   - Getting started with a blog
 ShowToc: true
 TocOpen: false
+draft: false
 ---
+
 # Getting started with a Hugo blog
 
 Getting started with a Hugo blog was an endeavor I've started a couple of times. Since i started working within Microsoft 365 I've been interested in sharing my knowledge. Mainly due to some popular bloggers and the insane amount of knowledge they can share. In the past I've tried blogging with a few amazing technologies because they we're interesting to me. I've dabbled in NextJS, done some stuff with React and tried Gatsby for some static site rendering. This was all an amazing learning experience but i missed the underlying knowledge and always tried to over engineer this. Then i stepped upon Hugo, which was a few years ago. It seemed so simple and i was able to whip up a site within 10 minutes through templates and an instruction. This felt like magic. However i fell down in my own trap and tried to over engineer this site and get everything in there, a profile page, my resume, amazing search functionality. This caused me to not start actually blogging and it stayed in the development phase.
@@ -43,7 +41,7 @@ The blog is currently setup very simple. It's making use of the following compon
 * Hugo - Papermod Theme
 * Github
 * Obsidian
-  		- Templater plugin
+  \- Templater plugin
 * GitHub Pages
 
 ## Hugo
@@ -56,7 +54,7 @@ Getting started and pushing the repository to GitHub was simple. I've published 
 
 ## Obsidian
 
-[Obsidian - Sharpen your thinking](https://obsidian.md/) Is an amazing tool. I've used it to visualize my personal knowledge management to a far greater extend then I ever imagined. But in the essence it's also a great markdown editor. Editing the metadata is very simple 
+[Obsidian - Sharpen your thinking](https://obsidian.md/) Is an amazing tool. I've used it to visualize my personal knowledge management to a far greater extend then I ever imagined. But in the essence it's also a great markdown editor. Editing the metadata is very simple
 
 ![Obsidian metadata example](/images/uploads/obsidianmetadataexample.png)
 

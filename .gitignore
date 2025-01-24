@@ -45,3 +45,6 @@ desktop.ini
 # Backup and hidden files
 *.~*~
 *.un~
+
+node_modules
+.env
