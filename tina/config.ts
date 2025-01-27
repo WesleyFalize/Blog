@@ -68,6 +68,7 @@ export default defineConfig({
             type: "string",
             name: "series",
             label: "Series",
+            list: true,
           },
           {
             type: "rich-text",
