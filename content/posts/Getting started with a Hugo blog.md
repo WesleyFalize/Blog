@@ -7,9 +7,14 @@ draft: false
 title: Getting started with a Hugo blog
 date: 2025-01-13T00:00:00.000Z
 author: Wesley Falize
-categories:
+tags:
+  - Guide
   - Blog
-series: 
+  - Hugo
+categories:
+  - Getting started
+  - Blog
+series:
   - Getting started with a blog
 ---
 
