@@ -10,6 +10,10 @@ export default defineConfig({
   branch,
   clientId: process.env.TINA_PUBLIC_CLIENT_ID,
   token: process.env.TINA_TOKEN,
+  cmsCallback: cms => {
+    cms.flags.set("branch-switcher", true);
+    return cms;
+  },
   build: {
     publicFolder: "public",
     outputFolder: "admin",
