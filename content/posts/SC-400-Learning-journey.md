@@ -8,5 +8,7 @@ categories:
   - Security
   - Governance
   - Compliancy
+series:
+  - Microsoft 365 Compliancy
 ---
 
