@@ -80,6 +80,22 @@ export default defineConfig({
             label: "Body",
             isBody: true,
           },
+          {
+            type : "boolean",
+            name : "draft",
+            label : "Draft",
+          }
+          ,
+          {
+            type : "boolean",
+            name : "ShowToc",
+            label : "ShowToc",
+          },
+          {
+            type : "boolean",
+            name : "TocOpen",
+            label : "TocOpen",
+          }
         ],
       },
       {
