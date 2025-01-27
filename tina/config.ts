@@ -84,8 +84,7 @@ export default defineConfig({
             type : "boolean",
             name : "draft",
             label : "Draft",
-          }
-          ,
+          },
           {
             type : "boolean",
             name : "ShowToc",
@@ -95,7 +94,7 @@ export default defineConfig({
             type : "boolean",
             name : "TocOpen",
             label : "TocOpen",
-          }
+          },
         ],
       },
       {
