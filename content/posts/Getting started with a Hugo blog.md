@@ -1,17 +1,15 @@
 ---
-title: Getting started with a Hugo blog
-date: 2025-01-13T00:00:00.000Z
-author: Wesley Falize
 description: This shows the process of getting started with a blog and how I've done it.
 summary: In this blog i talk about what i finally set up to get started with blogging
-tags:
-categories:
-  - Blog
-series:
-  - Getting started with a blog
 ShowToc: true
 TocOpen: false
 draft: false
+title: Getting started with a Hugo blog
+date: 2025-01-13T00:00:00.000Z
+author: Wesley Falize
+categories:
+  - Blog
+series: content/series/Getting-started-with-a-blog.md
 ---
 
 # Getting started with a Hugo blog
