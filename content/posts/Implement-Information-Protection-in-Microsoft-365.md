@@ -62,3 +62,7 @@ These modules are:
 
 **Prevent data loss**
 ![](https://learn.microsoft.com/en-us/training/wwl/m365-compliance-information-governance/media/prevent-data-loss.png)
+
+* Extend this with endpoint DLP
+
+**Govern your data**
