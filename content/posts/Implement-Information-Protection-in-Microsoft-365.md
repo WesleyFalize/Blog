@@ -35,7 +35,7 @@ These modules are:
 * Information protection involves People, Processes and Technology
   ![](/images/powered-by-intelligent-platform.png)
 
-Know your data
+**Know your data**
 
 * Framework for knowing data
   * Describe categories of sensitive data
@@ -49,7 +49,7 @@ Know your data
   * Content explorer
   * Activity explorer
 
-Protect your data
+**Protect your data**
 
 * Framework for protection
   * Define labels
@@ -59,3 +59,5 @@ Protect your data
   * Schematized data in Azure
 * A label protects data through Encryption, access control and visual markings
 * Emails can be secured with purview message encryption with options for automatic encryption or only for external access.
+
+**Prevent data loss**
