@@ -61,3 +61,4 @@ These modules are:
 * Emails can be secured with purview message encryption with options for automatic encryption or only for external access.
 
 **Prevent data loss**
+![](https://learn.microsoft.com/en-us/training/wwl/m365-compliance-information-governance/media/prevent-data-loss.png)
