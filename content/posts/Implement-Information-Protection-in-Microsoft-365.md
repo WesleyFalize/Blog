@@ -12,7 +12,7 @@ series:
   - Microsoft 365 Compliancy
 ---
 
-The first part of the journey will be following the 7 modules of [SC-400: Implement Information Protection in Microsoft 365](https://learn.microsoft.com/en-us/training/paths/implement-information-protection/). 
+The first part of the journey will be following the 7 modules of [SC-400: Implement Information Protection in Microsoft 365](https://learn.microsoft.com/en-us/training/paths/implement-information-protection/).
 
 These modules are:
 
@@ -29,6 +29,12 @@ These modules are:
 ## Key takeaways
 
 * Data will only grow 2016 - 2025 10X increase
+* Increase in regulations
+* Define a data security strategy
+* Protect and govern data wherever it lives![](/images/balance-data-security-productivity.png)
+* Information protection involves People, Processes and Technology
+  ![](/images/powered-by-intelligent-platform.png)
+*
 
 ## Challenges
 
