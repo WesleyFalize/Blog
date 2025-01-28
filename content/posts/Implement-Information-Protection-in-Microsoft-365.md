@@ -34,8 +34,28 @@ These modules are:
 * Protect and govern data wherever it lives![](/images/balance-data-security-productivity.png)
 * Information protection involves People, Processes and Technology
   ![](/images/powered-by-intelligent-platform.png)
-*
 
-## Challenges
+Know your data
 
-## Summary
+* Framework for knowing data
+  * Describe categories of sensitive data
+  * Discover and classify data
+  * View and manage items
+* Data classification concepts
+  * Sensitive information types (custom & 300 built in)
+  * Trainable classifiers (AI training)
+  * Exact data Match (Structured data)
+* Exploring data
+  * Content explorer
+  * Activity explorer
+
+Protect your data
+
+* Framework for protection
+  * Define labels
+  * Apply labels
+  * Apply labels to the cloud with Defender for cloud apps
+  * Scan for on premise files
+  * Schematized data in Azure
+* A label protects data through Encryption, access control and visual markings
+* Emails can be secured with purview message encryption with options for automatic encryption or only for external access.
