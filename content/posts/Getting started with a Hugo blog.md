@@ -8,8 +8,8 @@ title: Getting started with a Hugo blog
 date: 2025-01-13T00:00:00.000Z
 author: Wesley Falize
 tags:
-  - Guide
   - Blog
+  - Guide
   - Hugo
 categories:
   - Getting started

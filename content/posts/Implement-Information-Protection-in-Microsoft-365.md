@@ -3,9 +3,10 @@ title: Implement Information Protection in Microsoft 365
 date: 2025-01-28T18:44:23.059Z
 author: Wesley Falize
 tags:
-  - Sensitivity label
   - Information protection
   - Purview
+  - Sensitivity label
+  - SharePoint
 categories:
   - Compliancy
 series:
@@ -13,6 +14,7 @@ series:
 ShowToc: true
 TocOpen: false
 draft: true
+slug: implement-information-protection-microsoft-365
 ---
 
 The first part of the journey will be following the 7 modules of [SC-400: Implement Information Protection in Microsoft 365](https://learn.microsoft.com/en-us/training/paths/implement-information-protection/).
@@ -72,24 +74,30 @@ These modules are:
 - Retention labels apply to a specific item, label policies allow publishing of labels and retention policies apply to a workload
 - Both lifecycle management and records management are possible
 ![](https://learn.microsoft.com/en-us/training/wwl/m365-compliance-information-governance/media/govern-your-data.png)
-
 # Classify data for protection and governance
-- 5 tools for data classification available (Overview, content explorer, activity explorer, sensitive info types and trainable classifiers)
-- Classification happens automatically, and shows top sensitive information types in your organization.
-- Classification can happen through three ways:
-	- Manually by a user
-	- Automated like sensitive information types
-	- Through Machine learning
-- Sensitive information types are used in a lot of different places within Microsoft 365 (DLP, Sensitivity labels, Retention labels, Insider risk management, communication compliance, auto labeling and Priva)
-- Categories of SIT (Sensitive information Types)
-	- Built in SIT
-	- Named entity
-	- Custom SIT
-	- Exact data match (EDM) SIT
-- How is a SIT built up?
-	- Primary element
-		- Regex, keyword list, keyword dictionary or a function
-	- Supporting element
-		- Regex, keyword list or keyword dictionary
-	- Confidence level
-	- Proximity
+* 5 tools for data classification available (Overview, content explorer, activity explorer, sensitive info types and trainable classifiers)
+* Classification happens automatically, and shows top sensitive information types in your organization.
+* Classification can happen through three ways:
+	* Manually by a user
+	* Automated like sensitive information types
+	* Through Machine learning
+**Sensitive information Types (SIT)**
+* Sensitive information types are used in a lot of different places within Microsoft 365 (DLP, Sensitivity labels, Retention labels, Insider risk management, communication compliance, auto labeling and Priva)
+* Categories of SIT (Sensitive information Types)
+	* Built in SIT
+	* Named entity
+	* Custom SIT
+	* Exact data match (EDM) SIT
+* How is a SIT built up?
+	* Primary element
+		* Regex, keyword list, keyword dictionary or a function
+	* Supporting element
+		* Regex, keyword list or keyword dictionary
+	* Confidence level
+	* Proximity
+* Custom SIT can be created through UI, EDM and PowerShell
+* Trainable classifiers
+  * Pre trained classifiers
+  * Custom classifiers
+    * Configure with seeding the data, testing and publishing the classifier
+**Sensitivity labels** {{< tag tag="Sensitivity Labels" >}} {{< tag tag="SharePoint" >}}

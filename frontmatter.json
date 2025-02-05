@@ -42,6 +42,29 @@
           "title": "Categories",
           "name": "categories",
           "type": "categories"
+        },
+        {
+          "title": "author",
+          "name": "author",
+          "type": "string"
+        },
+        {
+          "title": "series",
+          "name": "series",
+          "type": "choice",
+          "choices": [
+            "Microsoft 365 Compliancy"
+          ]
+        },
+        {
+          "title": "ShowToc",
+          "name": "ShowToc",
+          "type": "boolean"
+        },
+        {
+          "title": "TocOpen",
+          "name": "TocOpen",
+          "type": "boolean"
         }
       ]
     }

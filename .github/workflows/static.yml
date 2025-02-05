@@ -38,29 +38,6 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "16"
-          cache: npm
-
-      - name: Install Node.js Dependencies
-        run: npm ci
-
-      - name: Verify TinaCMS Installation
-        run: |
-          if ! npm list tinacms &>/dev/null; then
-            echo "Error: TinaCMS is not installed in your project."
-            exit 1
-          fi
-
-      - name: Build TinaCMS
-        env:
-          TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
-          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
-        run: npx tinacms build
-
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
