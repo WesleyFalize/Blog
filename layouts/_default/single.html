@@ -24,11 +24,17 @@
       {{- partial "post_meta.html" . -}}
       {{- /* Render custom frontmatter fields if present */ -}}
       {{- with .Params.hyperLink }}
-      <p class="post-meta-link">Link: <a href="{{ . }}">{{ . }}</a></p>
+      {{- $link := . -}}
+      <p class="post-meta-link"><a href="{{ $link }}" rel="noopener noreferrer" target="_blank">{{- with
+          $.Params.hyperLinkTitle }}{{ .
+          }}{{- else }}{{
+          $link }}{{- end }}</a></p>
       {{- end }}
 
       {{- with .Params.certification }}
-      <p class="post-meta-cert">Certification: {{ . }}</p>
+      <p class="post-meta-cert">Certification: <a href=".././{{ .}}">{{ . }}
+        </a>
+      </p>
       {{- end }}
       {{- partial "translation_list.html" . -}}
       {{- partial "edit_post.html" . -}}
