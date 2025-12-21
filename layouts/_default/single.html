@@ -22,6 +22,14 @@
     {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
       {{- partial "post_meta.html" . -}}
+      {{- /* Render custom frontmatter fields if present */ -}}
+      {{- with .Params.hyperLink }}
+      <p class="post-meta-link">Link: <a href="{{ . }}">{{ . }}</a></p>
+      {{- end }}
+
+      {{- with .Params.certification }}
+      <p class="post-meta-cert">Certification: {{ . }}</p>
+      {{- end }}
       {{- partial "translation_list.html" . -}}
       {{- partial "edit_post.html" . -}}
       {{- partial "post_canonical.html" . -}}
