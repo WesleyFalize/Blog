@@ -13,7 +13,9 @@ series:
   - 
 ShowToc: true
 TocOpen: false
-draft:
+draft: true
+hyperLink:
+certification:
 ---
 # <% tp.file.title %>
 
